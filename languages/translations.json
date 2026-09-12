@@ -1,0 +1,22 @@
+{
+    "warning.freeze" : {
+        "es": "friseao",
+        "en": "You won't be able to access intranet's resources because of the following reason : Freeze"
+    },
+    "error.podman_not_installed": {
+        "es": "Podman no está instalado o no se encuentra en el PATH",
+        "en": "Podman is not installed or cannot be found in PATH"
+    },
+    "error.go_not_installed": {
+        "es": "Golang (go) no está instalado o no se encuentra en el PATH",
+        "en": "Golang (go) is not installed or cannot be found in PATH"
+    },
+    "error.go_mod_missing": {
+        "es": "No se encontró el archivo go.mod en el directorio actual",
+        "en": "The go.mod file was not found in the current directory"
+    },
+    "error.autologin_credentials_empty": {
+        "es": "Autologin está activado y las credenciales están vacías",
+        "en": "Autologin is enabled but the credentials are empty"
+    }
+}

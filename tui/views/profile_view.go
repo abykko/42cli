@@ -6,6 +6,7 @@ import (
 	"os"
 	"strings"
 	"time"
+	"log"
 
 	"golang.org/x/term"
 
@@ -13,6 +14,7 @@ import (
 	"charm.land/lipgloss/v2"
 
 	"42tui/tui/service"
+	"42tui/languages"
 )
 
 // profilePicture generates a deterministic 6x6 pixel avatar based on the user's ID hash.
@@ -420,6 +422,13 @@ func pace(p service.ProfileData) string {
 // Profile aggregates and outputs the root layout structure for the user terminal dashboard viewport.
 func Profile(p service.ProfileData, projectsVp viewport.Model) string {
 
+	lan, err := languages.New("es")
+	if err != nil {
+		log.Printf("Error loading language: %v", err)
+		fmt.Printf("Error loading language: %v\n", err)
+		os.Exit(1)
+	}
+
 	w, _, _ := term.GetSize(int(os.Stdout.Fd()))
 
 	if p.ID == 0 {
@@ -433,7 +442,7 @@ func Profile(p service.ProfileData, projectsVp viewport.Model) string {
 		return lipgloss.NewStyle().
 			Width(w).
 			AlignHorizontal(lipgloss.Center).
-			Render(freezeMessage)
+			Render(lan.Get("warning.freeze"))
 	}
 
 	profileInformation := lipgloss.NewStyle().
