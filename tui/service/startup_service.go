@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"42tui/api"
-	deployment "42tui/server-deployment"
+	deployment "42tui/deployment"
 )
 
 func Startup() (bool, error) {

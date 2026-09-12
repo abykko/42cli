@@ -6,7 +6,7 @@ import (
     tea "charm.land/bubbletea/v2"
     
     "42tui/conf"
-    "42tui/server-deployment"
+    "42tui/deployment"
 )
 
 func Tui() {

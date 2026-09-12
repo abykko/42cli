@@ -7,7 +7,7 @@ import (
 	tea "charm.land/bubbletea/v2"
 
 	"42tui/conf"
-	deployment "42tui/server-deployment"
+	deployment "42tui/deployment"
 	"42tui/tui/service"
 	"42tui/tui/views"
 )
